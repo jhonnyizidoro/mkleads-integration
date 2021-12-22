@@ -1,4 +1,4 @@
-const _mkLeads = () => {
+;(() => {
   const createElement = (tagName, className = '') => {
     const element = document.createElement(tagName)
     element.className = className
@@ -66,12 +66,5 @@ const _mkLeads = () => {
     document.body.append(popup)
   }
 
-  return () => {
-    createPopup()
-    createModal()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  _mkLeads()()
-})
+  document.addEventListener('DOMContentLoaded', createPopup)
+})()
