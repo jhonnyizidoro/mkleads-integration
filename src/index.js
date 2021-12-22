@@ -1,9 +1,7 @@
 const _mkLeads = () => {
-  const createElement = (tagName, className) => {
+  const createElement = (tagName, className = '') => {
     const element = document.createElement(tagName)
-    if (className) {
-      element.classList.add(className)
-    }
+    element.className = className
     return element
   }
 
@@ -41,25 +39,28 @@ const _mkLeads = () => {
 
   const createPopup = () => {
     const popup = createElement('div', 'mkleads__popup')
+    const header = createElement('div', 'mkleads__popup__header')
     const title = createElement('div', 'mkleads__popup__title')
     const button = createElement('button', 'mkleads__popup__button')
-    const closeButton = createElement('button', 'mkleads__popup__close')
+    const closeButton = createElement(
+      'button',
+      'mkleads__popup__close icon icon--angle-right'
+    )
 
     title.innerText = 'Gostou desse veículo?'
 
     button.type = 'button'
-    button['aria-label'] = 'Faça uma proposta nesse veículo'
     button.innerText = 'Faça uma proposta'
     button.addEventListener('click', createModal)
 
     closeButton.type = 'button'
     closeButton['aria-label'] = 'Fechar popup'
-    closeButton.innerText = '×'
     closeButton.addEventListener('click', () => removeElement('.mkleads__popup'))
 
-    popup.append(title)
+    header.append(title)
+    header.append(closeButton)
+    popup.append(header)
     popup.append(button)
-    popup.append(closeButton)
     document.body.append(popup)
   }
 

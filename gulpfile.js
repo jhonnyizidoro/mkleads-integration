@@ -1,13 +1,19 @@
 const { src, dest, parallel, series, watch } = require('gulp')
+const { rmdirSync, existsSync } = require('fs')
 
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')(require('sass'))
 const uglify = require('gulp-uglify')
 const pump = require('pump')
 
-const JS = () => pump(src('src/index.js'), uglify(), dest('dist'))
+const CLEAN = callback => {
+  if (existsSync('dist')) {
+    rmdirSync('dist', { recursive: true })
+  }
+  callback()
+}
 
-const NORMALIZE = () => pump(src('src/default.css'), dest('dist'))
+const JS = () => pump(src('src/index.js'), uglify(), dest('dist'))
 
 const SASS = () =>
   pump(
@@ -34,4 +40,4 @@ const RELOAD = callback => {
   callback()
 }
 
-exports.dev = series(parallel(JS, SASS, NORMALIZE), SERVER)
+exports.dev = series(CLEAN, parallel(JS, SASS), SERVER)

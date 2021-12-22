@@ -1,0 +1,553 @@
+* {
+  box-sizing: border-box
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+body,
+figure {
+  margin: 0
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none
+}
+
+a:visited {
+  text-decoration: none
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+address {
+  font-style: normal
+}
+
+article,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block
+}
+
+b,
+strong {
+  font-weight: bold
+}
+
+small {
+  font-size: 80%
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0
+}
+
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+  outline: 0
+}
+
+button {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default
+}
+
+[disabled] {
+  opacity: .5;
+  pointer-events: none
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+input {
+  line-height: normal
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+
+textarea {
+  overflow: auto;
+  resize: none
+}
+
+optgroup {
+  font-weight: bold
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+input.is-invalid,
+textarea.is-invalid,
+select.is-invalid {
+  border: 2px solid rgba(255, 56, 96, .5)
+}
+
+label.is-required::before {
+  color: #ff3860;
+  font-size: .75rem;
+  font-weight: 700;
+  content: "*";
+  margin-right: 2px
+}
+
+@media only screen and (max-width: 1023px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px
+  }
+}
+
+@keyframes showAlert {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(50%, -50%)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(50%, -50%)
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/icon.ttf?v=1.8") format("truetype"), url("/assets/fonts/icon.woff?v=1.8") format("woff"), url("/assets/fonts/icon.svg?v=1.8") format("svg")
+}
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+  font-family: "icon", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-transform: none
+}
+
+.icon.icon--add::before {
+  content: ""
+}
+
+.icon.icon--export::before {
+  content: ""
+}
+
+.icon.icon--arrow-left::before {
+  content: ""
+}
+
+.icon.icon--arrow-right::before {
+  content: ""
+}
+
+.icon.icon--hd::before {
+  content: ""
+}
+
+.icon.icon--video::before {
+  content: ""
+}
+
+.icon.icon--external::before {
+  content: ""
+}
+
+.icon.icon--full-screen::before {
+  content: ""
+}
+
+.icon.icon--internal::before {
+  content: ""
+}
+
+.icon.icon--tag::before {
+  content: ""
+}
+
+.icon.icon--body-style::before {
+  content: ""
+}
+
+.icon.icon--web::before {
+  content: ""
+}
+
+.icon.icon--characteristics::before {
+  content: ""
+}
+
+.icon.icon--checked::before {
+  content: ""
+}
+
+.icon.icon--clock::before {
+  content: ""
+}
+
+.icon.icon--close::before {
+  content: ""
+}
+
+.icon.icon--color-palette::before {
+  content: ""
+}
+
+.icon.icon--dollar::before {
+  content: ""
+}
+
+.icon.icon--door::before {
+  content: ""
+}
+
+.icon.icon--envelope::before {
+  content: ""
+}
+
+.icon.icon--facebook::before {
+  content: ""
+}
+
+.icon.icon--filter::before {
+  content: ""
+}
+
+.icon.icon--fuel::before {
+  content: ""
+}
+
+.icon.icon--home::before {
+  content: ""
+}
+
+.icon.icon--hp::before {
+  content: ""
+}
+
+.icon.icon--inline::before {
+  content: ""
+}
+
+.icon.icon--instagram::before {
+  content: ""
+}
+
+.icon.icon--license-plate::before {
+  content: ""
+}
+
+.icon.icon--linkedin::before {
+  content: ""
+}
+
+.icon.icon--location-pin::before {
+  content: ""
+}
+
+.icon.icon--microphone::before {
+  content: ""
+}
+
+.icon.icon--money-bag::before {
+  content: ""
+}
+
+.icon.icon--motorcycle::before {
+  content: ""
+}
+
+.icon.icon--pinterest::before {
+  content: ""
+}
+
+.icon.icon--price::before {
+  content: ""
+}
+
+.icon.icon--refrigeration::before {
+  content: ""
+}
+
+.icon.icon--search::before {
+  content: ""
+}
+
+.icon.icon--share::before {
+  content: ""
+}
+
+.icon.icon--situation::before {
+  content: ""
+}
+
+.icon.icon--skype::before {
+  content: ""
+}
+
+.icon.icon--speedometer::before {
+  content: ""
+}
+
+.icon.icon--square-check::before {
+  content: ""
+}
+
+.icon.icon--status::before {
+  content: ""
+}
+
+.icon.icon--store::before {
+  content: ""
+}
+
+.icon.icon--telephone::before {
+  content: ""
+}
+
+.icon.icon--transmission::before {
+  content: ""
+}
+
+.icon.icon--truck::before {
+  content: ""
+}
+
+.icon.icon--twitter::before {
+  content: ""
+}
+
+.icon.icon--upload::before {
+  content: ""
+}
+
+.icon.icon--whatsapp::before {
+  content: ""
+}
+
+.icon.icon--youtube::before {
+  content: ""
+}
+
+.icon.icon--car-checked::before {
+  content: ""
+}
+
+.icon.icon--car-convertible::before {
+  content: ""
+}
+
+.icon.icon--car-coupe::before {
+  content: ""
+}
+
+.icon.icon--car-damaged::before {
+  content: ""
+}
+
+.icon.icon--car-flooded::before {
+  content: ""
+}
+
+.icon.icon--car-hard-damaged::before {
+  content: ""
+}
+
+.icon.icon--car-hatchback::before {
+  content: ""
+}
+
+.icon.icon--car-minivan::before {
+  content: ""
+}
+
+.icon.icon--car-old::before {
+  content: ""
+}
+
+.icon.icon--car-pickup::before {
+  content: ""
+}
+
+.icon.icon--car-pickup-small::before {
+  content: ""
+}
+
+.icon.icon--car-scrap::before {
+  content: ""
+}
+
+.icon.icon--car-sedan::before {
+  content: ""
+}
+
+.icon.icon--car-sport::before {
+  content: ""
+}
+
+.icon.icon--car-stolen::before {
+  content: ""
+}
+
+.icon.icon--car-suv::before {
+  content: ""
+}
+
+.icon.icon--car-transfer::before {
+  content: ""
+}
+
+.icon.icon--car-wagon::before {
+  content: ""
+}
+
+.icon.icon--angle-left::before {
+  content: ""
+}
+
+.icon.icon--angle-right::before {
+  content: ""
+}
+
+.icon.icon--axle::before {
+  content: ""
+}
+
+.icon.icon--block::before {
+  content: ""
+}
+
+.icon.icon--brand::before {
+  content: ""
+}
+
+.icon.icon--cabin::before {
+  content: ""
+}
+
+.icon.icon--calendar::before {
+  content: ""
+}
+
+.icon.icon--camera::before {
+  content: ""
+}
+
+.icon.icon--car::before {
+  content: ""
+}
+
+@keyframes showShowcaseAlert {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%)
+  }
+}
+
+@keyframes showCookieAlert {
+  from {
+    transform: translateY(115%)
+  }
+  to {
+    transform: none
+  }
+}
+
+body,
+html {
+  color: #343438;
+  font-size: 14px;
+  background: linear-gradient(to right, #E3E3E3, #FAFAF8 50%);
+  font-family: "Montserrat", sans-serif
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 10px
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: #e3e3e3
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: #bf0f21;
+  border-radius: 10px
+}
+
+body,
+html {
+  background-image: url("/assets/background-shiftcar.png");
+  background-size: 100% auto;
+  height: 150vh;
+}
+
+@media (max-width: 1024px) {
+  body,
+  html {
+    background-image: url("/assets/background-shiftcar-mobile.png");
+  }
+}
