@@ -22,6 +22,7 @@ const _mkLeads = () => {
 
   const createModal = () => {
     const modal = createElement('div', 'mkleads__modal')
+    const content = createElement('div', 'mkleads__modal__content')
     const iframe = createElement('iframe', 'mkleads__modal__iframe')
     const button = createElement('button', 'mkleads__modal__button')
 
@@ -32,8 +33,9 @@ const _mkLeads = () => {
     button.innerText = '×'
     button.addEventListener('click', () => removeElement('.mkleads__modal'))
 
-    modal.append(iframe)
-    modal.append(button)
+    content.append(button)
+    content.append(iframe)
+    modal.append(content)
     document.body.append(modal)
   }
 
@@ -66,6 +68,7 @@ const _mkLeads = () => {
 
   return () => {
     createPopup()
+    createModal()
   }
 }
 
