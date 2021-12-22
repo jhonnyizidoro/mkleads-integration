@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.27.7",
+    "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -20,8 +21,5 @@
   },
   "scripts": {
     "dev": "gulp dev"
-  },
-  "devDependencies": {
-    "eslint": "^8.5.0"
   }
 }

@@ -22,9 +22,14 @@ const SERVER = () => {
     },
   })
 
-  watch('index.html', browserSync.reload)
-  watch('src/index.js', series(JS, browserSync.reload))
+  watch('index.html', RELOAD)
+  watch('src/index.js', series(JS, RELOAD))
   watch('src/styles.sass', SASS)
+}
+
+const RELOAD = callback => {
+  browserSync.reload()
+  callback()
 }
 
 exports.dev = series(parallel(JS, SASS), SERVER)
