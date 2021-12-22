@@ -13,20 +13,11 @@ const _mkLeads = () => {
   }
 
   const getIframeUrl = () => {
-    const { id, title, value, image, whatsApp, address, phone, email, storeId } =
-      window.MKLeads
+    let params = ''
 
-    const params = `
-			id=${id}&
-			title=${title}&
-			value=${value}&
-			image=${image}&
-			whatsApp=${whatsApp}&
-			address=${address}&
-			phone=${phone}&
-			email=${email}&
-			storeId=${storeId}
-		`.replace(/(\r\n|\n|\r|\t)/gm, '')
+    Object.keys(window.MKLeads).forEach(key => {
+      params += `${key}=${window.MKLeads[key]}&`
+    })
 
     return `https://mkleads-v2.vercel.app?${params}`
   }

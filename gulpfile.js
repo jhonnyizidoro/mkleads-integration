@@ -7,6 +7,8 @@ const pump = require('pump')
 
 const JS = () => pump(src('src/index.js'), uglify(), dest('dist'))
 
+const NORMALIZE = () => pump(src('src/default.css'), dest('dist'))
+
 const SASS = () =>
   pump(
     src('src/styles.sass'),
@@ -32,4 +34,4 @@ const RELOAD = callback => {
   callback()
 }
 
-exports.dev = series(parallel(JS, SASS), SERVER)
+exports.dev = series(parallel(JS, SASS, NORMALIZE), SERVER)
