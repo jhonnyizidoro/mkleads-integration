@@ -41,3 +41,4 @@ const RELOAD = callback => {
 }
 
 exports.dev = series(CLEAN, parallel(JS, SASS), SERVER)
+exports.build = series(CLEAN, parallel(JS, SASS))

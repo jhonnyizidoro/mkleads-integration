@@ -66,5 +66,7 @@
     document.body.append(popup)
   }
 
-  document.addEventListener('DOMContentLoaded', createPopup)
+  if (window.MKLeads) {
+    document.addEventListener('DOMContentLoaded', createPopup)
+  }
 })()
