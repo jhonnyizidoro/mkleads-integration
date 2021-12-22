@@ -1,0 +1,27 @@
+{
+  "name": "mkleads-integration",
+  "version": "1.0.0",
+  "description": "MK Leads V2 integration",
+  "main": "index.js",
+  "author": "Jhonny Izidoro Menarim",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "git-commit-msg-linter": "^3.2.8",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "prettier": "^2.5.1",
+    "pump": "^3.0.0",
+    "sass": "^1.45.1"
+  },
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0"
+  }
+}
